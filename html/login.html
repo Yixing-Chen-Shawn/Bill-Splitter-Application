@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Login</title>
+  <link rel="stylesheet" type="text/css" href="../css/reset.css">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Nunito">
+</head>
+<body>
+  <!-- header -->
+  <header class="header">
+    <a class="back" title="back" href="index.html"><i>&#xe6e5;</i>&nbsp;<span class="mobile-hidden">Back</span></a>
+    <div class="title"><i>&#xe600;</i>&nbsp;Login</div>
+  </header>
+
+  <!-- main -->
+  <div class="main login">
+    <div class="row clearfix">
+      <div class="width-3">
+        <label for="">E-mail</label>
+      </div>
+      <div class="width-7">
+        <input width="100%" type="text" name="email" maxlength="32" placeholder="E-mail">
+      </div>
+    </div>
+    <div class="row clearfix">
+      <div class="width-3">
+        <label for="">Password</label>
+      </div>
+      <div class="width-7">
+        <input width="100%" type="password" name="password"  maxlength="16" placeholder="Password">
+      </div>
+    </div>
+    <div class="row">
+      <a class="btn" title="login" href="javascript:login()">Login</a>
+      <a class="btn btn-default" title="go register" href="register.html">Register</a>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="../lib/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="../js/config.js"></script>
+  <script type="text/javascript" src="../js/common.js"></script>
+  <script type="text/javascript" src="../js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Join Bill</title>
+  <link rel="stylesheet" type="text/css" href="../css/reset.css">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Nunito">
+</head>
+<body>
+  <!-- header -->
+  <header class="header">
+    <a class="back" title="back" href="home.html"><i>&#xe6e5;</i>&nbsp;<span class="mobile-hidden">Back</span></a>
+    <div class="title"><i>&#xe696;</i>&nbsp;Join Bill</div>
+  </header>
+
+  <!-- main -->
+  <div class="main add">
+    <div class="row clearfix">
+      <div class="width-3">
+        <label for="">Bill Key</label></div>
+      <div class="width-7">
+        <input type="text" name="key" maxlength="20" placeholder="Key">
+      </div>
+    </div>
+    <div class="row clearfix">
+      <div class="width-3">
+        <label for="">Remaining</label></div>
+      <div class="width-7"><span class="success remain"></span></div>
+    </div>
+    <div class="row clearfix percent">
+      <div class="width-3">
+        <label for="">Percent</label></div>
+      <div class="width-7">
+        <input type="text" name="percent" maxlength="2" placeholder="%">
+      </div>
+    </div>
+    <div class="row">
+      <a class="btn" title="join in bill" href="javascript:join()">Join in</a>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="../lib/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="../js/config.js"></script>
+  <script type="text/javascript" src="../js/common.js"></script>
+  <script type="text/javascript" src="../js/bill.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      openLoading();
+      var key = getUrlParam('key');
+      if (key != '' && key != null) {
+        $('input[name=key]').val(key);
+        billByKey(key);
+      }
+      closeLoading();
+      $('input[name=key]').blur(function () {
+        billByKey($('input[name=key]').val());
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>New Bill</title>
+  <link rel="stylesheet" type="text/css" href="../css/reset.css">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Nunito">
+</head>
+<body>
+  <!-- header -->
+  <header class="header">
+    <a class="back" title="back" href="home.html"><i>&#xe6e5;</i>&nbsp;<span class="mobile-hidden">Back</span></a>
+    <div class="title"><i>&#xe696;</i>&nbsp;New Bill</div>
+  </header>
+
+  <!-- main -->
+  <div class="main new">
+    <div class="row clearfix">
+      <div class="width-3">Content</div>
+      <div class="width-7">
+        <input type="text" name="content" placeholder="Content">
+      </div>
+    </div>
+    <div class="row clearfix">
+      <div class="width-3">Total</div>
+      <div class="width-7">
+        <input type="text" name="total" placeholder="Total Price">
+      </div>
+    </div>
+    <div class="row clearfix">
+      <div class="width-3">Number</div>
+      <div class="width-7">
+        <input type="text" name="number" placeholder="Number of People">
+      </div>
+    </div>
+    <div class="row clearfix">
+      <div class="width-3">Type</div>
+      <div class="width-7">
+        <div>
+          <div class="width-5">
+            <input class="hidden" type="radio" id="type1" value="1" name="type" checked>
+            <label class="type active" for="type1">1:1</label>
+          </div>
+          <div class="width-5">
+            <input class="hidden" type="radio" id="type2" value="2" name="type">
+            <label class="type" for="type2">Customize</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <a class="btn" title="new bill" href="javascript:add()">New</a>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="../lib/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="../js/config.js"></script>
+  <script type="text/javascript" src="../js/common.js"></script>
+  <script type="text/javascript" src="../js/bill.js"></script>
+</body>
+</html>
